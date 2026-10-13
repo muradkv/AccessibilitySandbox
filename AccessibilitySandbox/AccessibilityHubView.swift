@@ -13,7 +13,7 @@ struct AccessibilityHubView: View {
             List {
                 Section("Core Concepts") {
                     NavigationLink {
-                        
+                        ImageTraitsComparisonView()
                     } label: {
                         Label("Images & Traits", systemImage: "photo.badge.checkmark")
                     }
