@@ -17,6 +17,12 @@ struct AccessibilityHubView: View {
                     } label: {
                         Label("Images & Traits", systemImage: "photo.badge.checkmark")
                     }
+                    
+                    NavigationLink {
+                        GroupingAndHidingView()
+                    } label: {
+                        Label("Hiding & Grouping", systemImage: "rectangle.compress.vertical")
+                    }
                 }
             }
             .navigationTitle("Accessibility Hub")
