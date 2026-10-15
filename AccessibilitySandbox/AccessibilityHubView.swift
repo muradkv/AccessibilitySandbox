@@ -23,6 +23,12 @@ struct AccessibilityHubView: View {
                     } label: {
                         Label("Hiding & Grouping", systemImage: "rectangle.compress.vertical")
                     }
+                    
+                    NavigationLink {
+                        AdjustableControlView()
+                    } label: {
+                        Label("Reading & Adjusting Values", systemImage: "slider.vertical.3")
+                    }
                 }
             }
             .navigationTitle("Accessibility Hub")
