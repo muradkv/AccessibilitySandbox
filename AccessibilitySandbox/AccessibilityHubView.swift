@@ -29,6 +29,12 @@ struct AccessibilityHubView: View {
                     } label: {
                         Label("Reading & Adjusting Values", systemImage: "slider.vertical.3")
                     }
+                    
+                    NavigationLink {
+                        VoiceInputLabelsView()
+                    } label: {
+                        Label("Voice Input Labels", systemImage: "mic.badge.plus")
+                    }
                 }
             }
             .navigationTitle("Accessibility Hub")
