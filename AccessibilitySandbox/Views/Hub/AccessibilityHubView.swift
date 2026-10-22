@@ -12,32 +12,43 @@ struct AccessibilityHubView: View {
         NavigationStack {
             List {
                 Section("Core Concepts") {
-                    NavigationLink {
-                        ImageTraitsComparisonView()
-                    } label: {
-                        Label("Images & Traits", systemImage: "photo.badge.checkmark")
-                    }
-                    
-                    NavigationLink {
-                        GroupingAndHidingView()
-                    } label: {
-                        Label("Hiding & Grouping", systemImage: "rectangle.compress.vertical")
-                    }
-                    
-                    NavigationLink {
-                        AdjustableControlView()
-                    } label: {
-                        Label("Reading & Adjusting Values", systemImage: "slider.vertical.3")
-                    }
-                    
-                    NavigationLink {
-                        VoiceInputLabelsView()
-                    } label: {
-                        Label("Voice Input Labels", systemImage: "mic.badge.plus")
+                    ForEach(AccessibilityTopic.allCases) { topic in
+                        NavigationLink(value: topic) {
+                            Label {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(topic.title)
+                                        .font(.headline)
+                                    Text(topic.subtitle)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                            } icon: {
+                                Image(systemName: topic.systemImage)
+                                    .foregroundStyle(.tint)
+                            }
+                            .padding(.vertical, 2)
+                        }
                     }
                 }
             }
             .navigationTitle("Accessibility Hub")
+            .navigationDestination(for: AccessibilityTopic.self) { topic in
+                destinationView(for: topic)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func destinationView(for topic: AccessibilityTopic) -> some View {
+        switch topic {
+        case .imagesAndTraits:
+            ImageTraitsComparisonView()
+        case .hidingAndGrouping:
+            GroupingAndHidingView()
+        case .adjustableValues:
+            AdjustableControlView()
+        case .voiceInputLabels:
+            VoiceInputLabelsView()
         }
     }
 }
