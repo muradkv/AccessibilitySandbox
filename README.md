@@ -10,6 +10,13 @@ An interactive iOS technical showcase and laboratory built natively with SwiftUI
 
 Accessibility Sandbox demonstrates core iOS Assistive Technology integrations—specifically **VoiceOver** and **Voice Control**—through side-by-side comparisons of naive ("problematic") UI implementations versus accessible, HIG-compliant patterns.
 
+## Preview
+<img width="19%" alt="Order" alt="Hub" src="https://github.com/user-attachments/assets/4a2af140-f4e0-4fd2-b7c5-ea293a28f801" />
+<img width="19%" alt="Order" alt="Image Traits" src="https://github.com/user-attachments/assets/d4b28897-4471-458f-9099-405f2787b12c" />
+<img width="19%" alt="Order" alt="Hiding Grouping" src="https://github.com/user-attachments/assets/042806b1-99fe-4923-b709-174a65791e93" />
+<img width="19%" alt="Order" alt="ReadingValues" src="https://github.com/user-attachments/assets/04440ee4-0ad1-485f-9a96-f38da487d3f6" />
+<img width="19%" alt="Order" alt="VoiceInputLabels" src="https://github.com/user-attachments/assets/675d3f89-d443-465e-8b76-8b847097cb88" />
+
 ## Features
 
 - **Side-by-Side Accessibility Audits:** Every demo screen contrasts default SwiftUI behavior against optimized accessibility configurations so developers can test and hear the difference directly in VoiceOver.
